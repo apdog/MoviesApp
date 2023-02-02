@@ -10,8 +10,8 @@ interface MovieInterface {
     @GET()
     suspend fun getAllMovies(
         @Query("api_key") apiKey: String,
-        @Query("language") language: String,
-        @Query("page") page: Int
+        @Query("language") language: Int,
+        @Query("page") page: String
     ) : Response<MoviesResponse>
 
 }
